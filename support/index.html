@@ -248,7 +248,18 @@
     <!-- Contact -->
     <div class="contact-section">
       <h2>Didn't Find an Answer?</h2>
-      <p>Check the FAQ above for common questions. For additional support, please refer to the App Store or check back soon for more resources.</p>
+      <p>Send us a message and we'll get back to you as soon as possible.</p>
+      <form action="https://formspree.io/f/xnjljkar" method="POST" style="margin-top: 32px; text-align: left;">
+        <div style="margin-bottom: 20px;">
+          <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500;">Email</label>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; background: rgba(42, 41, 69, 0.6); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 16px; font-family: inherit; box-sizing: border-box;" />
+        </div>
+        <div style="margin-bottom: 20px;">
+          <label for="message" style="display: block; margin-bottom: 8px; font-weight: 500;">Message</label>
+          <textarea id="message" name="message" required rows="6" style="width: 100%; padding: 12px; background: rgba(42, 41, 69, 0.6); border: 1px solid var(--border); border-radius: 8px; color: var(--text-primary); font-size: 16px; font-family: inherit; box-sizing: border-box; resize: vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+      </form>
     </div>
   </div>
 
