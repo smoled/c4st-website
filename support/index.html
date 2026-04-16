@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="C4ST Support — Help, FAQ, and contact for C4ST Coastal Forecast Tool.">
+  <meta name="theme-color" content="#0b0b1e">
+  <title>Support — C4ST</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .support-hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .support-hero h1 {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .support-hero p {
+      font-size: 18px;
+      color: var(--text-secondary);
+    }
+
+    .faq-section {
+      max-width: 800px;
+      margin: 60px auto;
+    }
+
+    .faq-section h2 {
+      font-size: 32px;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px;
+      background: rgba(42, 41, 69, 0.6);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      user-select: none;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background: rgba(42, 41, 69, 0.9);
+    }
+
+    .faq-toggle {
+      font-size: 20px;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background: rgba(16, 15, 35, 0.5);
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 20px;
+      max-height: 500px;
+    }
+
+    .faq-answer p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-section {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 60px;
+      background: rgba(26, 25, 53, 0.8);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .contact-section p {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+
+    .contact-section a {
+      display: inline-block;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">C4ST</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/support">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="support-hero">
+    <div class="container">
+      <h1>We're Here to Help</h1>
+      <p>Find answers to common questions or reach out to us directly.</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="container">
+    <div class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item active">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>How accurate are the forecasts?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>C4ST uses data from the Open-Meteo Marine API and weather forecasts, which are based on global weather models. Accuracy decreases further out (7+ days). For Australian waters, we provide hyper-local forecasts tuned to each beach's unique geography and tidal patterns.</p>
+          <p>Tide predictions use sinusoidal approximation based on the 12.42-hour and 6.21-hour lunar cycles, which is accurate for planning but not official tide tables.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>Do you offer offline forecasts?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>When you're offline or the API is unavailable, C4ST shows synthetic fallback data generated from each beach's latitude/longitude. This is marked clearly and shouldn't be relied on for planning. Always fetch fresh data when possible.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>How do custom notifications work?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Set your ideal conditions for a beach: swell height range, minimum period, maximum wind speed, wind direction, tide level, and time of day. C4ST scans the 7-day forecast and notifies you when those conditions line up.</p>
+          <p>You can notify up to 7 days in advance, and optionally also on the day of. The app checks forecasts when you open it and periodically in the background.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>Which beaches are included?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>C4ST covers 73 beaches across all 6 Australian states: NSW, QLD, VIC, SA, WA, and TAS. Browse by state or search by name/region. If your favourite beach isn't listed, email us and we'll consider adding it.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>Does C4ST work offline?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Forecasts require a live internet connection to fetch from our API. However, recently fetched data is cached, so you can view past forecasts briefly offline. For a fresh forecast, you'll need connectivity.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>What are shark activity alerts?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>C4ST tracks recent shark sightings reported near Australian beaches and sends notifications if a sighting is within ~50km of your favourite spots. Sightings are sourced from public reports and surf communities. Stay alert, but remember sharks are rare — use common sense alongside the app.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>Can I change units (feet, knots, etc.)?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Go to Settings and toggle between metric/imperial (metres/feet), 12h/24h time format, and km/h vs knots. Your preference is saved and applied everywhere in the app, including custom notifications.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>What data sources do you use?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>C4ST fetches weather and marine forecasts from the Open-Meteo APIs (free, open-source). Tides are calculated using harmonic approximation. Water temperatures are from Open-Meteo marine data. We do not scrape or repackage proprietary data.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>Is there a web version?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>C4ST is iOS-only right now. We're exploring Android and web versions in the future, but there's no timeline yet. Check back for updates.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+          <span>Does C4ST collect my location data?</span>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Only if you enable "Nearby Spots" in Settings, which uses your device's geolocation to rank nearby beaches. We never send location data to external servers — it's used locally to calculate distance to beaches.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-section">
+      <h2>Didn't Find an Answer?</h2>
+      <p>Reach out to us directly. We read and reply to every message.</p>
+      <a href="mailto:support@c4st.app" class="btn btn-primary">Email Support</a>
+      <p>support@c4st.app</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="margin-top: 60px;">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h4>C4ST</h4>
+          <p>Coastal Forecast Tool</p>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="/support">Help & FAQ</a></li>
+            <li><a href="mailto:support@c4st.app">Email Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="https://twitter.com" target="_blank">Twitter / X</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 C4ST. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
