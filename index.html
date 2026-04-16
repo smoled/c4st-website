@@ -12,7 +12,7 @@
   <!-- Nav -->
   <nav class="navbar">
     <div class="container">
-      <div class="logo">C4ST</div>
+      <a href="/" class="logo">C4ST</a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
         <li><a href="#download">Download</a></li>
@@ -24,38 +24,69 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1>Know the Ocean Before You Paddle Out</h1>
-      <p>C4ST combines live tide predictions, swell forecasts, and wind data from 73 Australian beaches into one beautiful forecast.</p>
+      <div class="hero-label">Coastal Forecast Tool</div>
+      <h1>Tides, swell, wind — <em>all in one forecast</em></h1>
+      <p>73 Australian beaches. 7-day forecasts. Custom alerts when your conditions line up. Built by surfers, for everyone who reads the ocean.</p>
       <div class="cta-buttons">
         <a href="https://apps.apple.com/au/app/4cast/id6478816161" class="btn btn-primary" target="_blank">Download on App Store</a>
-        <a href="#features" class="btn btn-secondary">Learn More</a>
+        <a href="#features" class="btn btn-secondary">Learn more</a>
       </div>
-      <div class="hero-image">
-        <div class="phone-mockup">
-          <div class="phone-content">
-            <div class="app-header">C4ST</div>
-            <div class="app-body">
-              <div class="forecast-item">
-                <span class="icon">🌊</span>
-                <div>
-                  <div class="label">Tide</div>
-                  <div class="value">LOW 4pm</div>
-                </div>
-              </div>
-              <div class="forecast-item">
-                <span class="icon">📈</span>
-                <div>
-                  <div class="label">Swell</div>
-                  <div class="value">1.2m @ 10s</div>
-                </div>
-              </div>
-              <div class="forecast-item">
-                <span class="icon">💨</span>
-                <div>
-                  <div class="label">Wind</div>
-                  <div class="value">NE 12kn</div>
-                </div>
-              </div>
+
+      <!-- Beach cards showcase -->
+      <div class="beach-cards">
+        <div class="beach-card">
+          <div class="beach-card-top">
+            <div>
+              <div class="beach-name">Bondi Beach</div>
+              <div class="beach-region">Eastern Suburbs, NSW</div>
+            </div>
+            <div>
+              <div class="beach-temp">22°</div>
+              <div class="beach-temp-range">H:22° L:13°</div>
+            </div>
+          </div>
+          <div class="beach-card-bottom">
+            <div>
+              <div><span class="quality-badge quality-glassy">GLASSY</span> <span class="beach-swell">1.1m @ 10s</span></div>
+              <div class="beach-detail">light offshore 8km/h · mid tide, rising</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="beach-card">
+          <div class="beach-card-top">
+            <div>
+              <div class="beach-name">Byron Bay</div>
+              <div class="beach-region">Northern NSW, NSW</div>
+            </div>
+            <div>
+              <div class="beach-temp">27°</div>
+              <div class="beach-temp-range">H:27° L:15°</div>
+            </div>
+          </div>
+          <div class="beach-card-bottom">
+            <div>
+              <div><span class="quality-badge quality-clean">CLEAN</span> <span class="beach-swell">1.4m @ 12s</span></div>
+              <div class="beach-detail">moderate cross-shore 12km/h · mid-high, rising</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="beach-card">
+          <div class="beach-card-top">
+            <div>
+              <div class="beach-name">Snapper Rocks</div>
+              <div class="beach-region">Gold Coast, QLD</div>
+            </div>
+            <div>
+              <div class="beach-temp">25°</div>
+              <div class="beach-temp-range">H:26° L:17°</div>
+            </div>
+          </div>
+          <div class="beach-card-bottom">
+            <div>
+              <div><span class="quality-badge quality-clean">CLEAN</span> <span class="beach-swell">0.9m @ 9s</span></div>
+              <div class="beach-detail">light onshore 6km/h · high tide, dropping</div>
             </div>
           </div>
         </div>
@@ -66,37 +97,129 @@
   <!-- Features -->
   <section class="features" id="features">
     <div class="container">
-      <h2>Powerful Features</h2>
+      <div class="section-label">What you get</div>
+      <h2>Everything you need, nothing you don't</h2>
       <div class="feature-grid">
         <div class="feature-card">
           <div class="feature-icon">📊</div>
-          <h3>Unified Forecast</h3>
-          <p>Tide, swell, and wind all on one graph. Scrub hour-by-hour to see exactly what's coming.</p>
+          <h3>Unified forecast</h3>
+          <p>Tide, swell, and wind all on one interactive graph. Scrub hour-by-hour across 7 days to see exactly what's coming.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">⏰</div>
-          <h3>Best Time to Surf</h3>
-          <p>Algorithm scores every window across swell, period, wind, tide, and daylight. Find your optimal session instantly.</p>
+          <h3>Best time to surf</h3>
+          <p>Algorithm scores every 3-hour window across swell, period, wind direction, tide level, and daylight. Find your session instantly.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔔</div>
-          <h3>Custom Alerts</h3>
-          <p>Set your perfect conditions — swell height, period, wind, direction, tide level. Get notified days ahead when it's lining up.</p>
+          <h3>Custom alerts</h3>
+          <p>Define your perfect conditions with sliders and compass pickers. Get notified days ahead when the forecast lines up.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🗺️</div>
-          <h3>73 Beaches</h3>
-          <p>From Bondi to Byron, Margaret River to Sunset Beach. Search by name, region, or state. Save your favourites.</p>
+          <h3>73 beaches</h3>
+          <p>Every major surf spot across NSW, QLD, VIC, SA, WA, and TAS. Search by name, region, or state. Save your favourites.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🌡️</div>
-          <h3>Detailed Conditions</h3>
-          <p>Weather, temperature, UV index, water temp, sunrise/sunset, tide state — all at a glance.</p>
+          <h3>Detailed conditions</h3>
+          <p>Weather, temperature chart, UV index, water temp, sunrise/sunset, tide state — all on one card you can scrub through.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">💨</div>
-          <h3>Wind Map</h3>
-          <p>Real-time wind vectors across the coast. Beautiful visualization shows wind speed and direction live.</p>
+          <h3>Live wind map</h3>
+          <p>Real-time wind particle visualization across the coast. See speed and direction animated over a Leaflet map.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="highlights">
+    <div class="container">
+      <!-- Custom alerts highlight -->
+      <div class="highlight-row">
+        <div class="highlight-text">
+          <div class="section-label">New feature</div>
+          <h3>Your conditions, your notification</h3>
+          <p>Set thresholds for swell height, period, wind speed, and direction. Choose a tide level. Pick a compass range for wind and swell direction. When the 7-day forecast matches, you'll know about it days ahead.</p>
+        </div>
+        <div class="highlight-visual">
+          <div class="mock-card">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.176; margin-bottom: 12px;">Thresholds</div>
+
+            <div class="mock-slider">
+              <div class="mock-slider-label"><span>Swell height</span><span>1.0m – 3.0m</span></div>
+              <div class="mock-slider-track">
+                <div class="mock-slider-fill blue" style="left: 17%; width: 33%;"></div>
+                <div class="mock-slider-handle blue" style="left: calc(17% - 7px);"></div>
+                <div class="mock-slider-handle blue" style="left: calc(50% - 7px);"></div>
+              </div>
+            </div>
+
+            <div class="mock-slider">
+              <div class="mock-slider-label"><span>Swell period</span><span>9s – 22s</span></div>
+              <div class="mock-slider-track">
+                <div class="mock-slider-fill teal" style="left: 38%; width: 62%;"></div>
+                <div class="mock-slider-handle teal" style="left: calc(38% - 7px);"></div>
+                <div class="mock-slider-handle teal" style="left: calc(100% - 7px);"></div>
+              </div>
+            </div>
+
+            <div class="mock-slider">
+              <div class="mock-slider-label"><span>Wind</span><span>0kt – 16kt</span></div>
+              <div class="mock-slider-track">
+                <div class="mock-slider-fill coral" style="left: 0; width: 50%;"></div>
+                <div class="mock-slider-handle coral" style="left: -7px;"></div>
+                <div class="mock-slider-handle coral" style="left: calc(50% - 7px);"></div>
+              </div>
+            </div>
+
+            <div class="mock-tide-chips">
+              <span class="mock-chip active">ANY</span>
+              <span class="mock-chip inactive">LOW</span>
+              <span class="mock-chip inactive">MID</span>
+              <span class="mock-chip inactive">HIGH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Best time highlight -->
+      <div class="highlight-row" style="flex-direction: row-reverse;">
+        <div class="highlight-text">
+          <div class="section-label">Smart scoring</div>
+          <h3>Best time to surf, calculated</h3>
+          <p>Our algorithm evaluates every hour across swell size, wave period, wind direction, tide level, and daylight. It finds the optimal 3-hour window and rates it from poor to great — so you spend less time guessing and more time in the water.</p>
+        </div>
+        <div class="highlight-visual">
+          <div class="mock-card">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.176; margin-bottom: 16px;">Best window</div>
+            <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+              <span class="quality-badge quality-glassy">GREAT</span>
+              <span style="font-size: 20px; font-weight: 300;">7am – 10am</span>
+            </div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); opacity: 0.52; line-height: 1.8;">
+              1.4m @ 12s from SE<br>
+              Wind NW 8km/h · offshore<br>
+              Mid tide, rising
+            </div>
+            <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-faint);">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 9.5px; letter-spacing: 1.5px; text-transform: uppercase; opacity: 0.176; margin-bottom: 8px;">Score breakdown</div>
+              <div style="display: flex; gap: 8px;">
+                <div style="flex: 1; height: 3px; border-radius: 2px; background: var(--teal);"></div>
+                <div style="flex: 1; height: 3px; border-radius: 2px; background: var(--teal);"></div>
+                <div style="flex: 1; height: 3px; border-radius: 2px; background: var(--blue);"></div>
+                <div style="flex: 1; height: 3px; border-radius: 2px; background: var(--teal);"></div>
+              </div>
+              <div style="display: flex; gap: 8px; margin-top: 4px; font-family: 'JetBrains Mono', monospace; font-size: 8px; color: var(--text-faint);">
+                <span style="flex: 1;">Swell</span>
+                <span style="flex: 1;">Period</span>
+                <span style="flex: 1;">Wind</span>
+                <span style="flex: 1;">Tide</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -105,10 +228,11 @@
   <!-- Download -->
   <section class="download" id="download">
     <div class="container">
-      <h2>Download C4ST Today</h2>
+      <div class="section-label">Get started</div>
+      <h2>Know the ocean before you paddle out</h2>
       <p>Available now on the App Store for iPhone.</p>
-      <a href="https://apps.apple.com/au/app/4cast/id6478816161" class="btn btn-primary btn-large" target="_blank">Get C4ST on App Store</a>
-      <p class="version">Version 1.1 • iOS 14+</p>
+      <a href="https://apps.apple.com/au/app/4cast/id6478816161" class="btn btn-primary" target="_blank">Download C4ST</a>
+      <p class="version">v1.1 · iOS 14+ · Free</p>
     </div>
   </section>
 
@@ -118,18 +242,17 @@
       <div class="footer-content">
         <div>
           <h4>C4ST</h4>
-          <p>Coastal Forecast Tool</p>
+          <p>Coastal Forecast Tool<br>Made in Australia</p>
         </div>
         <div>
           <h4>Support</h4>
           <ul>
             <li><a href="/support">Help & FAQ</a></li>
-            <li><a href="mailto:support@c4st.app">Email Support</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 C4ST. All rights reserved.</p>
+        <p>&copy; 2026 C4ST</p>
       </div>
     </div>
   </footer>
